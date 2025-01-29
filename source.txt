@@ -15,8 +15,8 @@ local OrionLib = {
 	Themes = {
 		Default = {
 			Main = Color3.fromRGB(0, 0, 0),
-			Second = Color3.fromRGB(32, 32, 32),
-			Stroke = Color3.fromRGB(255, 255, 255),
+			Second = Color3.fromRGB(20, 18, 18),
+			Stroke = Color3.fromRGB(8, 255, 16),
 			Divider = Color3.fromRGB(60, 60, 60),
 			Text = Color3.fromRGB(255, 255, 255),
 			TextDark = Color3.fromRGB(150, 150, 150)
@@ -341,7 +341,7 @@ end)
 CreateElement("Image", function(ImageID)
 	local ImageNew = Create("ImageLabel", {
 		Image = ImageID,
-		BackgroundTransparency = 1
+		BackgroundTransparency = 20
 	})
 
 	if GetIcon(ImageID) ~= nil then
