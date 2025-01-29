@@ -4,6 +4,7 @@ This documentation is for the stable release of Orion Library.
 ## Booting the Library
 ```lua
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/S2EXE/Gui-/refs/heads/main/source.txt')))()
+
 ```
 
 
@@ -11,6 +12,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/S2E
 ## Creating a Window
 ```lua
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
 ```
 
 
@@ -22,12 +24,14 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
 ```
 ## Creating a Section
 ```lua
 local Section = Tab:AddSection({
 	Name = "Section"
 })
+
 ```
 You can add elements to sections the same way you would add them to a tab normally.
 
@@ -39,6 +43,7 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+
 ```
 
 
@@ -51,6 +56,7 @@ Tab:AddButton({
       		print("button pressed")
   	end    
 })
+
 ```
 
 
@@ -63,11 +69,13 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
+
 ```
 
 ### Changing the value of an existing Toggle
 ```lua
 CoolToggle:Set(true)
+
 ```
 
 
@@ -81,11 +89,13 @@ Tab:AddColorpicker({
 		print(Value)
 	end	  
 })
+
 ```
 
 ### Setting the color picker's value
 ```lua
 ColorPicker:Set(Color3.fromRGB(255,255,255))
+
 ```
 
 
@@ -103,11 +113,13 @@ Tab:AddSlider({
 		print(Value)
 	end    
 })
+
 ```
 
 ### Change Slider Value
 ```lua
 Slider:Set(2)
+
 ```
 Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
 
@@ -115,22 +127,26 @@ Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) 
 ## Creating a Label
 ```lua
 Tab:AddLabel("Label")
+
 ```
 
 ### Changing the value of an existing label
 ```lua
 CoolLabel:Set("Label New!")
+
 ```
 
 
 ## Creating a Paragraph
 ```lua
 Tab:AddParagraph("Paragraph","Paragraph Content")
+
 ```
 
 ### Changing an existing paragraph
 ```lua
 CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
+
 ```
 
 
@@ -144,6 +160,7 @@ Tab:AddTextbox({
 		print(Value)
 	end	  
 })
+
 ```
 
 
@@ -157,11 +174,13 @@ Tab:AddBind({
 		print("press")
 	end    
 })
+
 ```
 
 ### Chaning the value of a bind
 ```lua
 Bind:Set(Enum.KeyCode.E)
+
 ```
 
 
@@ -175,23 +194,27 @@ Tab:AddDropdown({
 		print(Value)
 	end    
 })
+
 ```
 
 ### Adding a set of new Dropdown buttons to an existing menu
 ```lua
 Dropdown:Refresh(List<table>,true)
+
 ```
 
 The above boolean value "true" is whether or not the current buttons will be deleted.
 ### Selecting a dropdown option
 ```lua
 Dropdown:Set("dropdown option")
+
 ```
 
 # Finishing your script (REQUIRED)
 The below function needs to be added at the end of your code.
 ```lua
 OrionLib:Init()
+
 ```
 
 ### How flags work.
@@ -206,6 +229,7 @@ Tab1:AddToggle({
 })
 
 print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
+
 ```
 Flags only work with the toggle, slider, dropdown, bind, and colorpicker.
 
@@ -219,4 +243,5 @@ Config files are made for every game the library is launched in.
 ## Destroying the Interface
 ```lua
 OrionLib:Destroy()
+
 ```
