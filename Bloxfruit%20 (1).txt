@@ -8029,13 +8029,3 @@ spawn(function()
     end
 end)
 end
-----------------------------------------------------------------------------------------------------------------------------------------------
-InterfaceManager:SetFolder("SPEEDScriptHub")
-SaveManager:SetFolder("SPEEDWAVE/specific-game")
-Window:SelectTab(1)
-Fluent:Notify({
-    Title = "SPEED WAVE | Blox Fruit",
-    Content = "تم تحميل السكربت",
-    Duration = 8
-})
-SaveManager:LoadAutoloadConfig()
