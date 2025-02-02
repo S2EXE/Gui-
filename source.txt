@@ -1,4 +1,4 @@
-local Orion1 = game.CoreGui:FindFirstChild("Sander X Normal <Orion Lib>")
+local Orion1 = game.CoreGui:FindFirstChild("S2 hub <Orion Lib>")
 
 if OrionR then
   OrionR:Destroy()
