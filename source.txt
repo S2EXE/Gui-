@@ -1704,10 +1704,17 @@ function OrionLib:MakeWindow(WindowConfig)
 		return ElementFunction   
 	end  
 	
+		OrionLib:MakeNotification({
+		Name = "S2",
+		Content = "مصنوع من تيم سعودي عربي",
+		Time = 5
+	})
+	
+
 	
 	return TabFunction
-end   
-
+end  
+  
 function OrionLib:Destroy()
 	Orion:Destroy()
 end
