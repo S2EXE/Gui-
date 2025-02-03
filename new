@@ -673,8 +673,10 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
+	  OrionLib:MakeNotification({Name = "Sander X Normal",Content = "جاري غلق الواجهة" ,Image = "rbxassetid://",Time = 5})task.wait(1)
 	  Orion:Destroy()
 	end)
+
 
 	local function LoadSequence()
 		MainWindow.Visible = false
