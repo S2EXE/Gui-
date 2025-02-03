@@ -387,7 +387,7 @@ end)
 CreateElement("Label", function(Text, TextSize, Transparency)
 	local Label = Create("TextLabel", {
 		Text = Text or "",
-    TextColor3 = Color3.fromRGB(191, 255, 242),
+    TextColor3 = Color3.fromRGB(252, 255, 254),
 		TextTransparency = Transparency or 0,
 		TextSize = TextSize or 15,
 		Font = Enum.Font.Gotham,
