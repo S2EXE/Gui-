@@ -1,4 +1,4 @@
-local Orion1 = game.CoreGui:FindFirstChild("Sander X Normal <Orion Lib>")
+local Orion1 = game.CoreGui:FindFirstChild("S2 <Orion Lib>")
 
 if OrionR then
   OrionR:Destroy()
@@ -673,11 +673,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
-	  OrionLib:MakeNotification({Name = "Sander X Normal",Content = "Destroying the Script..." ,Image = "rbxassetid://",Time = 5})task.wait(1)
-	  Orion:Destroy()
+	Orion:Destroy()
 	end)
-
-	OrionLib:MakeNotification({Name = "Sander X Normal",Content = "Running script..." ,Image = "rbxassetid://",Time = 5})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
