@@ -20,12 +20,12 @@ local OrionLib = {
 	Flags = {},
 	Themes = {
 		Default = {
-			Main = Color3.fromRGB(0, 0, 0),
-			Second = Color3.fromRGB(0, 0, 0),
-			Stroke = Color3.fromRGB(255, 255, 255),
-			Divider = Color3.fromRGB(60, 60, 60),
-			Text = Color3.fromRGB(255, 255, 255),
-			TextDark = Color3.fromRGB(127, 130, 130)
+Main = Color3.fromRGB(0, 0, 0),
+Second = Color3.fromRGB(0, 0, 0),
+Stroke = Color3.fromRGB(191, 255, 242),
+Divider = Color3.fromRGB(60, 60, 60),
+Text = Color3.fromRGB(191, 255, 242),
+TextDark = Color3.fromRGB(191, 255, 242)
 		}
 	},
 	SelectedTheme = "Default",
@@ -57,7 +57,7 @@ guiRH = Instance.new("ScreenGui",Orion)
 nextb = Instance.new("ImageButton", guiRH)
 gui = Instance.new("UICorner", nextb)
 
-Orion.Name = "S2 hub <Orion Lib>"
+Orion.Name = "Sander X Normal <Orion Lib>"
 
 guiRH.Name = "Minimize"
 nextb.Position = UDim2.new(0,100,0,60)
@@ -487,11 +487,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "اول مكتبة عربية "
+	WindowConfig.IntroText = WindowConfig.IntroText or "Sander X Normal"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
-	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://136401635766491"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://136401635766491"
+	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://8834748103"
 	OrionLib.Folder = WindowConfig.ConfigFolder
 	OrionLib.SaveCfg = WindowConfig.SaveConfig
 
@@ -673,7 +673,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
+	  OrionLib:MakeNotification({Name = "Sander X Normal",Content = "Destroying the Script..." ,Image = "rbxassetid://",Time = 5})task.wait(1)
+	  Orion:Destroy()
 	end)
+
+	OrionLib:MakeNotification({Name = "Sander X Normal",Content = "Running script..." ,Image = "rbxassetid://",Time = 5})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
