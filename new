@@ -673,6 +673,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
+	  Orion:Destroy()
 	end)
 
 	local function LoadSequence()
