@@ -207,7 +207,7 @@ Dropdown:Refresh(List<table>,true)
 
 ```
 
-The above boolean value "true" is whether or not the current buttons will be deleted.
+القيمة المنطقية أعلاه "صحيح" هي ما إذا كان سيتم حذف الأزرار الحالية أم لا.
 ### تحديد خيار القائمة المنسدلة
 ```lua
 Dropdown:Set("dropdown option")
