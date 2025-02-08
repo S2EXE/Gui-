@@ -21,7 +21,7 @@ local Window = OrionLib:MakeWindow({Name = "عنوان المكتبة", HidePrem
 
 
 
-## اصنع النافذm
+## اصنع النافذ
 ```lua
 local Tab = Window:MakeTab({
 	Name = "النافذه الاولة",
@@ -30,7 +30,7 @@ local Tab = Window:MakeTab({
 })
 
 ```
-## اصنع القسم ا
+## اصنع القسم 
 ```lua
 local Section = Tab:AddSection({
 	Name = "قسم 1"
