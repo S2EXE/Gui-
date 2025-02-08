@@ -1,7 +1,7 @@
-# Orion Library
-This documentation is for the stable release of Orion Library.
+# SLO Library
+ملفات المكتبة كامله
 
-## Booting the Library
+## مشغل المكتبة
 ```lua
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/S2EXE/Gui-/refs/heads/main/S2%20Library.txt")))()
 
@@ -9,38 +9,42 @@ local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/S2E
 
 
 
-## Creating a Window
+## اصنع الواجهة
 ```lua
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "عنوان المكتبة", HidePremium = false, SaveConfig = true, ConfigFolder = "ملف"})
+
+--[[
+تقدر تحط اسم الملف بك
+]]
 
 ```
 
 
 
-## Creating a Tab
+## اصنع النافذm
 ```lua
 local Tab = Window:MakeTab({
-	Name = "Tab 1",
-	Icon = "rbxassetid://4483345998",
+	Name = "النافذه الاولة",
+	Icon = "rbxassetid://136401635766491",
 	PremiumOnly = false
 })
 
 ```
-## Creating a Section
+## اصنع القسم ا
 ```lua
 local Section = Tab:AddSection({
-	Name = "Section"
+	Name = "قسم 1"
 })
 
 ```
-You can add elements to sections the same way you would add them to a tab normally.
 
-## Notifying the user
+
+## ارسل اشعار ل المستخدم
 ```lua
 OrionLib:MakeNotification({
-	Name = "Title!",
-	Content = "Notification content... what will it say??",
-	Image = "rbxassetid://4483345998",
+	Name = "العنوان",
+	Content = "وش راح تقول في الاشعار؟؟؟",
+	Image = "rbxassetid://136401635766491",
 	Time = 5
 })
 
@@ -48,22 +52,22 @@ OrionLib:MakeNotification({
 
 
 
-## Creating a Button
+## اصنع زر
 ```lua
 Tab:AddButton({
-	Name = "Button!",
+	Name = "زر 1",
 	Callback = function()
-      		print("button pressed")
+      		print("Hi")
   	end    
 })
 
 ```
 
 
-## Creating a Checkbox toggle
+## اصنع زر تشغيل والغاء
 ```lua
 Tab:AddToggle({
-	Name = "This is a toggle!",
+	Name = "زر الغاء و تشغيل",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
@@ -72,7 +76,7 @@ Tab:AddToggle({
 
 ```
 
-### Changing the value of an existing Toggle
+### تغيير قيمة Toggle الموجودة
 ```lua
 CoolToggle:Set(true)
 
@@ -80,7 +84,7 @@ CoolToggle:Set(true)
 
 
 
-## Creating a Color Picker
+## لون الواجهة او اشياء ثانيه
 ```lua
 Tab:AddColorpicker({
 	Name = "Colorpicker",
@@ -92,14 +96,14 @@ Tab:AddColorpicker({
 
 ```
 
-### Setting the color picker's value
+### حط لون
 ```lua
 ColorPicker:Set(Color3.fromRGB(255,255,255))
 
 ```
 
 
-## Creating a Slider
+## اصنع خط تقدر تسحبه وترجعه
 ```lua
 Tab:AddSlider({
 	Name = "Slider",
@@ -116,7 +120,7 @@ Tab:AddSlider({
 
 ```
 
-### Change Slider Value
+### تغير قيمة Slider
 ```lua
 Slider:Set(2)
 
@@ -124,33 +128,33 @@ Slider:Set(2)
 Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
 
 
-## Creating a Label
+## اصنع تسمية
 ```lua
 Tab:AddLabel("Label")
 
 ```
 
-### Changing the value of an existing label
+### تغير القيمه Label
 ```lua
 CoolLabel:Set("Label New!")
 
 ```
 
 
-## Creating a Paragraph
+## اصنع بروغراف
 ```lua
 Tab:AddParagraph("Paragraph","Paragraph Content")
 
 ```
 
-### Changing an existing paragraph
+### تحديث البروغراف
 ```lua
 CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
 
 ```
 
 
-## Creating an Adaptive Input
+## اصنع مدخلات التكيف
 ```lua
 Tab:AddTextbox({
 	Name = "Textbox",
@@ -164,10 +168,10 @@ Tab:AddTextbox({
 ```
 
 
-## Creating a Keybind
+## إنشاء اخفاء الواجهة
 ```lua
 Tab:AddBind({
-	Name = "Bind",
+	Name = "اخفاء",
 	Default = Enum.KeyCode.E,
 	Hold = false,
 	Callback = function()
@@ -177,14 +181,14 @@ Tab:AddBind({
 
 ```
 
-### Chaning the value of a bind
+### تغير 
 ```lua
 Bind:Set(Enum.KeyCode.E)
 
 ```
 
 
-## Creating a Dropdown menu
+## اصنع قائمة منسدلة
 ```lua
 Tab:AddDropdown({
 	Name = "Dropdown",
@@ -197,29 +201,29 @@ Tab:AddDropdown({
 
 ```
 
-### Adding a set of new Dropdown buttons to an existing menu
+### إضافة مجموعة من الأزرار المنسدلة الجديدة إلى القائمة الموجودة
 ```lua
 Dropdown:Refresh(List<table>,true)
 
 ```
 
 The above boolean value "true" is whether or not the current buttons will be deleted.
-### Selecting a dropdown option
+### تحديد خيار القائمة المنسدلة
 ```lua
 Dropdown:Set("dropdown option")
 
 ```
 
-# Finishing your script (REQUIRED)
-The below function needs to be added at the end of your code.
+# الانتهاء من البرنامج النصي الخاص بك (مطلوب)
+يجب إضافة الوظيفة أدناه في نهاية التعليمات البرمجية الخاصة بك.
 ```lua
 OrionLib:Init()
 
 ```
 
-### How flags work.
-The flags feature in the ui may be confusing for some people. It serves the purpose of being the ID of an element in the config file, and makes accessing the value of an element anywhere in the code possible.
-Below in an example of using flags.
+### كيفية عمل الأعلام.
+قد تكون ميزة الأعلام في واجهة المستخدم مربكة لبعض الأشخاص. إنه يخدم غرض كونه معرف عنصر في ملف التكوين، ويجعل الوصول إلى قيمة العنصر في أي مكان في الكود ممكنًا.
+أدناه في مثال لاستخدام الأعلام.
 ```lua
 Tab1:AddToggle({
     Name = "Toggle",
@@ -231,16 +235,20 @@ Tab1:AddToggle({
 print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
 
 ```
-Flags only work with the toggle, slider, dropdown, bind, and colorpicker.
+يطبع قيمة التبديل.
 
-### Making your interface work with configs.
-In order to make your interface use the configs function you first need to add the `SaveConfig` and `ConfigFolder` arguments to your window function. The explanation of these arguments in above.
-Then you need to add the `Flag` and `Save` values to every toggle, slider, dropdown, bind, and colorpicker you want to include in the config file.
-The `Flag = <string>` argument is the ID of an element in the config file.
-The `Save = <bool>` argument includes the element in the config file.
-Config files are made for every game the library is launched in.
+```
+تعمل الأعلام فقط مع أدوات التبديل، وشريط التمرير، والقائمة المنسدلة، والربط، ومنتقي الألوان.
 
-## Destroying the Interface
+### جعل واجهتك تعمل مع التكوينات.
+لكي تجعل واجهتك تستخدم وظيفة التكوينات، عليك أولاً إضافة `SaveConfig و`ConfigFolder`  
+ الحجج لوظيفة نافذتك. شرح هذه الحجج في أعلاه.
+بعد ذلك، يتعين عليك إضافة قيمتي "Flag" و"Save" إلى كل تبديل، وشريط تمرير، وقائمة منسدلة، وربط، ومنتقي ألوان تريد تضمينه في ملف التكوين.
+الوسيطة `Flag = <string>` هي معرف العنصر في ملف التكوين.
+تتضمن الوسيطة `Save = <bool>` العنصر الموجود في ملف التكوين.
+يتم إنشاء ملفات التكوين لكل لعبة يتم تشغيل المكتبة فيها.
+
+## تحطيم الواجهة
 ```lua
 OrionLib:Destroy()
 
