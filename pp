@@ -1509,7 +1509,7 @@ local MainWindow =
                 ToggleConfig.Default = ToggleConfig.Default or false
                 ToggleConfig.Callback = ToggleConfig.Callback or function()
                     end
-                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
+                ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(145, 1, 1)
                 ToggleConfig.Flag = ToggleConfig.Flag or nil
                 ToggleConfig.Save = ToggleConfig.Save or false
 
