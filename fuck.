@@ -767,7 +767,7 @@ function redzlib:MakeWindow(Configs)
 	local Window, FirstTab = {}, false
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
-			Title = "لوعندك سوء تجربه لسكربتي تقدر تفتخ تكت في سيرفري وسوف اطوؤ السكربت وشكرا",
+			Title = "لوعندك سوء تجربه لسكربتي تقدر تفتخ تكت في سيرفري وسوف اطور السكربت وشكرا",
 			Text = "هل تريد قفل السكربت؟",
 			Options = {
 				{"نعم", function()
