@@ -16,8 +16,8 @@ local redzlib = {
 				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),  -- Azul medio vibrante 
 				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))   -- Azul marino profundo
 			}),
-			["Color Hub 2"] = Color3.fromRGB(0, 0, 0),  -- Azul oscuro suave
-			["Color Stroke"] = Color3.fromRGB(0, 0, 0),  -- Azul con brillo sutil
+			["Color Hub 2"] = Color3.fromRGB(255, 234, 0),  -- Azul oscuro suave
+			["Color Stroke"] = Color3.fromRGB(255, 234, 0),  -- Azul con brillo sutil
 			["Color Theme"] = Color3.fromRGB(0, 0, 0),  -- Azul brillante intenso
 			["Color Text"] = Color3.fromRGB(200, 200, 200),  -- Blanco frío
 			["Color Dark Text"] = Color3.fromRGB(255, 234, 0)  -- Gris azulado claro
