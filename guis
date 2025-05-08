@@ -15,10 +15,10 @@ _G.WindowFontSizeButtonSet =  _G.WindowFontSizeButtonSet or 10
 	local redzlib = {
 	Themes = {
 		Darker = {
-			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(25, 25, 25)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))
+	["Color Hub 1"] = ColorSequence.new({
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),  -- Azul marino profundo أ
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),  -- Azul medio vibrante 
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))   -- Azul marino profundo
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
